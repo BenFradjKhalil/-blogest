@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titre %} Les details {% endblock %}
+{% block contenu %}
+<div class="container">
+<h1>Les details</h1> 
+<h2>{{ article.titre }}</h2>
+<a  href="{% url 'articles:article' slug=article.slug %}">
+    <img src="{{ article.images.url }}" alt="{{ article.titre }}">
+</a>
+<p>{{ article.contenu }}</p>
+<span>{{ article.date_publication }}</span>
+</div>
+{% endblock %}

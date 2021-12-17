@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titre %} Les details {% endblock %}
+{% block contenu %}
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-6 mt-3" >
+    <h1>Nouvel Article</h1>
+            <hr class="my-2">
+<form action="{% url 'articles:creer' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-primary">Creer</button>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

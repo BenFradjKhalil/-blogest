@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+    
+    
+{% block titre %} Page d'Articles {% endblock %}
+
+{% block contenu %} 
+    <div class="container">
+        <div class="row mt-4">
+        <div class="col-lg-11">
+            <h1>Les Articles</h1>
+        </div>
+        <div class="col-lg-1">
+            <a class="btn btn-primary" href="{% url 'auth:login-blog' %}">Creer</a>
+        </div>
+        </div>
+        <hr class="my-4">
+    </div>
+
+    <div class="container">
+        <div class="row">
+        {% for article in articles %}
+        <div class=" col-md-6 col-lg-4 mb-4">
+        <div class="card">  
+        <a  href="{% url 'articles:article' slug=article.slug %}">
+            <img class="card-img-top" style="height: 300px;" src="{{ article.images.url }}" alt="{{ article.titre }}">
+        </a>
+        
+        <div class="card-body">
+             <h2 class="card-title">{{ article.titre }}</h2>
+            <p class="card-text">{{ article.contenu }}</p>
+            <p class="card-text">
+                <small class="card-text">
+                {{ article.date_publication }}
+            </small>
+            </p>
+        </div>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+    </div>
+    
+    
+   
+
+
+
+{% endblock %}

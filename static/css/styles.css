@@ -1,0 +1,11 @@
+span i:first-child{
+    color: #E9ECEF;
+}
+label {
+    display: block;
+}
+input,textarea{
+    display: block;
+    width: 100%;
+    padding-bottom: 16px;
+}

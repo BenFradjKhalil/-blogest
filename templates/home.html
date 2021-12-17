@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block titre %} Page D'accueil {% endblock %}
+    
+    
+    {% block contenu %} 
+    <div class="card bg-light pb-3 pt-3">
+        <div class="card-body text-center">  
+          <h1 class="display-4 card-title" style="font-size:48px;">Voyages</h1>
+          <p class="lead text-muted" style="font-size: 22px;">Voyager c'est ma vie ! Je vais vous faire découvrir mes distinations favorites a traves ce blog. </p>
+          <a href="{% url 'articles:articles' %}" class="btn btn-primary">Articles</a>
+        
+        </div>
+    </div>
+        <div class="container-md">
+            <div class="row" >
+                <div class="col-lg-6 pt-4">
+                    <img style="width: 100%;" src="{% get_media_prefix %}voyages.jpg">
+                </div>
+                <div class="col-lg-6 pt-4 text-justify">
+                    <h1 class="pb-4">Mes aventures</h1>
+                    <p  class="lead text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur minima adipisci unde, magni numquam modi inventore ex voluptate sint commodi hic ipsum maiores nemo fugiat eius blanditiis earum libero labore vel. Esse, soluta quam velit earum reprehenderit amet dolorum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 my-5 text-center">
+                    <span class="fa-stack fa-5x">
+                        <i class="fas fa-circle fa-stack-2x fa-inverse  "></i>
+                        <i class="fas fa-hiking fa-stack-1x"></i>
+                    </span>
+                    <h2 class="mt-2">Randonnée</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, consectetur?</p>
+                </div>
+                <div class="col-lg-4 my-5 text-center">
+                    <span class="fa-stack fa-5x">
+                        <i class="fas fa-circle fa-stack-2x fa-inverse  "></i>
+                        <i class="fas fa-utensils fa-stack-1x"></i>
+                    </span>
+                    <h2 class="mt-2 ">Dégustation</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, consectetur?</p>
+                </div>
+                <div class="col-lg-4 my-5 text-center">
+                    <span class="fa-stack fa-5x">
+                        <i class="fas fa-circle fa-stack-2x fa-inverse  "></i>
+                        <i class="fas fa-route fa-stack-1x"></i>
+                    </span>
+                    <h2 class="mt-2">Découverte</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, consectetur?</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    {% endblock %}
