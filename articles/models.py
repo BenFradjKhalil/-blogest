@@ -6,7 +6,7 @@ class Articles(models.Model):
     contenu=models.TextField()
     slug=models.SlugField(max_length=100)
     date_publication=models.DateTimeField(auto_now_add=True)
-    images=models.ImageField(default='default.jpg')
+    images=models.ImageField()
     
     def __str__(self):
         return self.titre

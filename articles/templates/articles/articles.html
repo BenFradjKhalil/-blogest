@@ -21,7 +21,9 @@
         {% for article in articles %}
         <div class=" col-md-6 col-lg-4 mb-4">
         <div class="card">  
-       
+        <a  href="{% url 'articles:article' slug=article.slug %}">
+            <img class="card-img-top" style="height: 300px;" src="{{ article.images.url }}" alt="{{ article.titre }}">
+        </a>
         
         <div class="card-body">
              <h2 class="card-title">{{ article.titre }}</h2>
