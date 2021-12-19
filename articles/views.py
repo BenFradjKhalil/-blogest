@@ -15,13 +15,13 @@ def articles_view(request):
     return render(request,'articles/articles.html', context={'articles': articles})
 
 def article_view(request, slug):  
-    try :
-        article=Articles.objects.get(slug=slug)
-        return render(request,'articles/detail.html', context={'article': article})
-    except Articles.DoesNotExist:
-        raise Http404("L'article n'existe pas" )
-    #article=get_object_or_404(Articles,slug=slug)
-    #return render(request,'articles/detail.html', context={'article': article})
+    #try :
+        #article=Articles.objects.get(slug=slug)
+        #return render(request,'articles/detail.html', context={'article': article})
+    #except Articles.DoesNotExist:
+        #raise Http404("L'article n'existe pas" )"
+    article=get_object_or_404(Articles,slug=slug)
+    return render(request,'articles/detail.html', context={'article': article})
    
 
 def creer_view(request):
